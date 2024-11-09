@@ -1,0 +1,4 @@
+{
+    "command.convertToAbsolute": "絶対パスに変換",
+    "command.convertToRelative": "相対パスに変換"
+  }

@@ -1,0 +1,53 @@
+{
+  "name": "markdown-path-converter",
+  "displayName": "Markdown Path Converter",
+  "description": "Convert between relative and absolute paths in Markdown",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:markdown-path-converter.convertToAbsolute",
+    "onCommand:markdown-path-converter.convertToRelative"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-path-converter.convertToAbsolute",
+        "title": "%command.convertToAbsolute%"
+      },
+      {
+        "command": "markdown-path-converter.convertToRelative",
+        "title": "%command.convertToRelative%"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection && editorLangId == markdown",
+          "command": "markdown-path-converter.convertToAbsolute",
+          "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection && editorLangId == markdown",
+          "command": "markdown-path-converter.convertToRelative",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
