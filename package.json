@@ -2,6 +2,8 @@
   "name": "markdown-path-converter",
   "displayName": "Markdown Path Converter",
   "description": "Convert between relative and absolute paths in Markdown",
+  "author": "seeu100",
+  "publisher": "seeu100",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
